@@ -1,0 +1,581 @@
+@font-face {
+    font-family: 'holberton_school-icon';
+    src: url('holberton_school-icon.eot');
+    src: url('holberton_school-icon.eot#iefix') format('embedded-opentype'),
+    url('holberton_school-icon.ttf') format('truetype'),
+    url('holberton_school-icon.woff') format('woff'),
+    url('holberton_school-icon.svg#holberton_school-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'holberton_school-icon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* General body styling and font settings */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Container for content, centered with max width */
+.content-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url("images/headphones_hero_1.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 30px 0 100px;
+    /* Adjust padding as needed */
+    color: #ffffff;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-section .content-container {
+    position: relative;
+    z-index: 2;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #FF6565;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background-color: #FF6565;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    margin-bottom: 40px;
+}
+
+.cta-button:hover {
+    opacity: 0.9;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* What We Do Section */
+.what-we-do-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+    color: #333333;
+    text-align: center;
+}
+
+.what-we-do-section .section-title,
+.what-we-do-section .section-description {
+    color: #0b1120;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    font-size: 1rem;
+    color: #666666;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+    text-align: center;
+    /* Additions for animation */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Hover effect for 'What we do' cards */
+.card:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.card-icon {
+    font-size: 60px;
+    color: #FF6565;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #666666;
+}
+
+/* Our Results Section */
+.results-section {
+    background-color: #0b1120;
+    color: #ffffff;
+    padding: 80px 0;
+    position: relative;
+    background-image: url("images/headphones_hero_2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.results-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.results-section .content-container {
+    position: relative;
+    z-index: 2;
+}
+
+.results-section .section-title,
+.results-section .section-description {
+    color: #ffffff;
+    text-align: center;
+}
+
+.results-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.result-card {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pentagon {
+    background-image: url('pentagone.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+    /* Additions for animation */
+    animation: pulse 2s infinite;
+}
+
+/* Keyframes for the pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 101, 101, 0.7);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(255, 101, 101, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 101, 101, 0);
+    }
+}
+
+.percentage {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.card-text {
+    font-size: 0.8rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Contact Us Section */
+.contact-section {
+    background-color: #ffffff;
+    color: #333333;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #666666;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    color: #333333;
+    outline: none;
+    transition: border-bottom-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-bottom-color: #FF6565;
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #0b1120;
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+    margin-left: 15px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666666;
+    margin: 0;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+
+    header nav {
+        margin-top: 20px;
+    }
+
+    header nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero-section {
+        padding: 60px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1rem;
+    }
+
+    .what-we-do-section {
+        padding: 40px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-description {
+        margin-bottom: 30px;
+    }
+
+    .results-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .results-section {
+        padding: 40px 0;
+    }
+
+    .contact-section {
+        padding: 40px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+        display: flex;
+    }
+}
+
+.pentagon {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 20px;
+    background-color: #e54747;
+    display: inline-block;
+}
+
+.pentagon::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 40px solid #e54747;
+}
+
+.pentagon-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 150px;
+    /* Adjust as needed for vertical positioning */
+}
+
+.pentagon-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    color: white;
+    text-align: center;
+}
+
+.pentagon-content h2 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.pentagon-content p {
+    margin: 0;
+    font-size: 0.8em;
+}
+
+/* ... existing CSS ... */
+
+/* Hamburger menu styling */
+.hamburger-menu-button {
+    display: none; /* Hide by default on larger screens */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10; /* Ensure it's above other elements */
+}
+
+.hamburger-menu-button .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* Open state for the menu button */
+.hamburger-menu-button.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu-button.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu-button.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Navigation menu for mobile */
+.nav-menu {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    transform: translateY(-200%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 5;
+}
+
+.nav-menu.open {
+    transform: translateY(0);
+}
+
+.nav-menu a {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 480px) {
+    header {
+        flex-direction: row; /* Align logo and button horizontally */
+        justify-content: space-between;
+        padding: 20px 20px 10px;
+    }
+    
+    .logo {
+        padding-bottom: 0; /* Remove extra padding */
+    }
+
+    /* Show the hamburger button on small screens */
+    .hamburger-menu-button {
+        display: flex;
+    }
+
+    /* Hide the full navigation links on small screens by default */
+    header nav {
+        display: none;
+    }
+    
+    .nav-menu {
+        display: flex; /* Show the nav menu when it's open */
+    }
+
+    /* ... other existing mobile styles ... */
+}

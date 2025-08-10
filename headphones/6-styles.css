@@ -1,0 +1,50 @@
+body {
+    background-color: #1a2233; /* For the dark background similar to the image */
+}
+
+.pentagon {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 20px;
+  background-color: #e54747;
+  display: inline-block;
+}
+
+.pentagon::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 40px solid #e54747;
+}
+
+.pentagon-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 150px; /* Adjust as needed for vertical positioning */
+}
+
+.pentagon-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  text-align: center;
+}
+
+.pentagon-content h2 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.pentagon-content p {
+  margin: 0;
+  font-size: 0.8em;
+}
